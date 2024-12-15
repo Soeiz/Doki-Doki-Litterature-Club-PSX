@@ -1,0 +1,44 @@
+
+                        if (VertPosbg[2].vx > 100) {
+                            if (frameforseed % 14 == 1) {
+                                VertPosbg[0].vx--;
+                                VertPosbg[0].vy++;
+                                VertPosbg[1].vy--;
+                                VertPosbg[1].vx--;
+                                VertPosbg[2].vx--;
+                                VertPosbg[2].vy++;
+                                VertPosbg[3].vx--;
+                                VertPosbg[3].vy--;
+                            }
+                        }
+                        if (MovVectorbg.vx < -80) {
+                            if (frameforseed % 17 == 1) {
+                                MovVectorbg.vx++;
+                            }
+                        }
+
+                        if (cutsceneframes == -1) {
+                            cutsceneframes = 1500;
+                        } else {cutsceneframes--;}
+                        switch(cutsceneframes) {
+                            case 1450 :
+                                currentline++;
+                            break;
+                            case 1437:
+                                VertPosbg[0].vx = 10;
+                                VertPosbg[0].vy = -72;
+                                VertPosbg[1].vx = 10;
+                                VertPosbg[1].vy = 73;
+                                VertPosbg[2].vx = 110;
+                                VertPosbg[2].vy = -72;
+                                VertPosbg[3].vx = 110;
+                                VertPosbg[3].vy = 73;
+                                MovVectorbg.vx = -90;
+                            break;
+
+
+
+
+    // Read thingies
+    loaded_currentday[0] = MemCardReadData((u_long*)&currentday, 128*3, 256);
+    while(MemCardSync(1, &cardCmd, &slotResult[0]) == 0);

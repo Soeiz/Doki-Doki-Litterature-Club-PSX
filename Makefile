@@ -1,0 +1,114 @@
+.PHONY: all cleansub
+all:
+	mkpsxiso -y ./isoconfig.xml
+cleansub:
+	$(MAKE) clean
+	rm -f ddlc.cue ddlc.bin
+
+TARGET = ddlc
+
+SRCS = DDLC.c \
+sounds/GUI/select.vag \
+sounds/GUI/hover.vag \
+sounds/SFX/pageflip.vag \
+images/GUI/overlay/MMLIL.tim \
+images/BG/LILSPLASH.tim \
+images/BG/LILSPLASH2.tim \
+images/BG/SPLASHBROKEN.tim \
+images/GUI/LOGOLITTLE.tim \
+images/GUI/LILPARTI.tim \
+images/GUI/MENUBGLIL.tim \
+images/GUI/SAYOLIL.tim \
+images/GUI/NATSULIL.tim \
+images/GUI/MONILIL.tim \
+images/GUI/YULIL.tim \
+images/GUI/special/SAYOHANGING.tim \
+images/GUI/special/SAYOHANGING2.tim \
+images/GUI/TEXTBOXLIL.tim \
+images/text/new.tim \
+images/text/MAINMENU.tim \
+images/text/MAINMENUSELECTED.tim \
+images/text/newselected.tim \
+images/text/setting.tim \
+images/text/settingselected.tim \
+images/text/LoadGame.tim \
+images/text/LoadGameselected.tim \
+images/text/SaveGame.tim \
+images/text/SaveGameselected.tim \
+images/text/END.tim \
+images/GUI/NAMEBOXLIL.tim \
+images/GUI/poemgame/N_STICKER_1LIL.tim \
+images/GUI/poemgame/N_STICKER_2LIL.tim \
+images/GUI/poemgame/S_STICKER_1LIL.tim \
+images/GUI/poemgame/S_STICKER_2LIL.tim \
+images/GUI/poemgame/Y_STICKER_1LIL.tim \
+images/GUI/poemgame/Y_STICKER_2LIL.tim \
+images/GUI/poemgame/M_STICKER_1.tim \
+images/characters/Sayori/C.tim \
+images/characters/Sayori/A.tim \
+images/characters/Sayori/P.tim \
+images/characters/Sayori/Q.tim \
+images/characters/Sayori/H.tim \
+images/characters/Sayori/G.tim \
+images/characters/Sayori/R.tim \
+images/characters/Sayori/U.tim \
+images/characters/Sayori/W.tim \
+images/characters/Sayori/Y.tim \
+images/characters/Sayori/M.tim \
+images/characters/Sayori/N.tim \
+images/characters/Sayori/J.tim \
+images/characters/Sayori/1R.tim \
+images/characters/Sayori/1L.tim \
+images/characters/Sayori/2R.tim \
+images/characters/Sayori/2L.tim \
+images/characters/Yuri/1R.tim \
+images/characters/Yuri/1L.tim \
+images/characters/Yuri/2R.tim \
+images/characters/Yuri/2L.tim \
+images/characters/Yuri/A.tim \
+images/characters/Yuri/C.tim \
+images/characters/Yuri/E.tim \
+images/characters/Yuri/K.tim \
+images/characters/Yuri/N.tim \
+images/characters/Yuri/U.tim \
+images/characters/Yuri/V.tim \
+images/characters/Yuri/L.tim \
+images/characters/Yuri/F.tim \
+images/characters/Yuri/Q.tim \
+images/characters/Yuri/I.tim \
+images/characters/Yuri/W.tim \
+images/characters/Natsuki/1R.tim \
+images/characters/Natsuki/1L.tim \
+images/characters/Natsuki/2R.tim \
+images/characters/Natsuki/2L.tim \
+images/characters/Natsuki/3R.tim \
+images/characters/Natsuki/3L.tim \
+images/characters/Natsuki/A.tim \
+images/characters/Natsuki/S.tim \
+images/characters/Natsuki/E.tim \
+images/characters/Natsuki/C.tim \
+images/characters/Natsuki/D.tim \
+images/characters/Natsuki/K.tim \
+images/characters/Natsuki/G.tim \
+images/characters/Natsuki/O.tim \
+images/characters/Natsuki/M.tim \
+images/characters/Natsuki/P.tim \
+images/characters/Natsuki/U.tim \
+images/characters/Natsuki/V.tim \
+images/characters/Natsuki/Z.tim \
+images/characters/Natsuki/X.tim \
+images/characters/Monika/1R.tim \
+images/characters/Monika/1L.tim \
+images/characters/Monika/2R.tim \
+images/characters/Monika/2L.tim \
+images/characters/Monika/A.tim \
+images/characters/Monika/B.tim \
+images/characters/Monika/E.tim \
+images/characters/Monika/K.tim \
+images/characters/Monika/P.tim \
+images/characters/Monika/D.tim \
+images/characters/Monika/R.tim \
+images/characters/Monika/L.tim \
+images/cg/N_CG1_EXP4LIL.tim \
+
+include ../common.mk 
